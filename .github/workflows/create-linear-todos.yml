@@ -1,5 +1,8 @@
 name: Create Linear Issues on Push to main
 
+# TODO: change branch name to uat or staging
+# TODO: trigger workflow on PR events
+
 on:
   push:
     branches:
