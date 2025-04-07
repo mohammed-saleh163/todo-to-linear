@@ -15,10 +15,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # depth 0 to get full history instead of shallow repo cloning
 
+        # I momentarily commented out the create-linear-todos. You can do as you please with it.
       - name: Run create-linear-issues script
         run: |
-          ./.github/scripts/create-linear-todos.sh
+          ./.github/scripts/scan-project-tasks.sh
+          # ./.github/scripts/create-linear-todos.sh
         env:
           LINEAR_API_KEY: ${{ secrets.LINEAR_API_KEY }}
           TEAM_ID: ${{ secrets.LINEAR_TEAM_ID }}
