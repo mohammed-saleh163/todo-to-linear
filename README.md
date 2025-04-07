@@ -35,6 +35,10 @@ As requested by @Charlo, I added a new script as part of the CI workflow that:
 -   Creates Linear issues with a medium priority for TODOs and high for FIXMEs and BUGs
 -   Describes the issues with more details such as file location, line number, and the commit URL
 
+### Example:
+
+![example3](./image3.png)
+
 Also, this operation is _idempotent_, meaning that no issue can be duplicated once it has been created.
 
 One thing to note is that all the issues are created as backlog and with no label. But this can easily change..
