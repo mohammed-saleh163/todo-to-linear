@@ -26,3 +26,17 @@ and the URL in the description leads us to:
 Finally: it's not much, but it's honest work.
 
 ### _TL;DR: I'll be waiting for my 30 monsters if everything goes well 💰_
+
+# Updates 🔨:
+
+As requested by @Charlo, I added a new script as part of the CI workflow that:
+
+-   Scans all git tracked files for any TODOs, FIXMEs, or BUGs
+-   Creates Linear issues with a medium priority for TODOs and high for FIXMEs and BUGs
+-   Describes the issues with more details such as file location, line number, and the commit URL
+
+Also, this operation is _idempotent_, meaning that no issue can be duplicated once it has been created.
+
+One thing to note is that all the issues are created as backlog and with no label. But this can easily change..
+
+Clone this repo and test it, or simply copy the scripts in any repo and have fun with it.
