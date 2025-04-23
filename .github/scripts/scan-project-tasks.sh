@@ -17,7 +17,6 @@ git ls-files | while read -r file; do
     title=$(echo "$line" | sed -E 's/^\s*(\/\/|\*|#)\s*//' | sed 's/^\s*//')
 
 
-
   # check if issue exists
 
     response=$(
@@ -61,8 +60,6 @@ EOF
     fi
 
     commit=$(git annotate -L $lineNum,$lineNum "$file" | awk '{print $1}')
-    echo "FILE $file"
-    echo "COMMIT $commit"
 
     url="https://github.com/${REPO_NAME}/commit/$commit"
     
