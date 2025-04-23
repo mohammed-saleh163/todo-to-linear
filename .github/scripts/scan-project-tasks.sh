@@ -99,5 +99,6 @@ EOF
     echo "Issue already exists with that title"
   fi
 
+    sleep 1
   done
 done
